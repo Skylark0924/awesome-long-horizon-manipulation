@@ -10,11 +10,15 @@ Related works are listed as follows:
 
 ---
 
-## Methods
+**Content**
+
+[TOC]
+
+## Methodology
 
 ### Constraint graph
 
-1. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021
+1. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021 | [Video](https://youtu.be/mCNdvjTbHNI)
 2. [Multi-robot grasp planning for sequential assembly operations](https://doi.org/10.1007/s10514-018-9748-z) Autonomous Robots 2019 | [Video](https://www.youtube.com/watch?v=vBymMF6mrhI)
 
 ### Tree search
@@ -34,19 +38,15 @@ Related works are listed as follows:
 
 ### Imitation learning
 
-1. [Learning Sensorimotor Primitives of Sequential Manipulation Tasks from Visual Demonstrations](https://ieeexplore.ieee.org/document/9811703/) ICRA 2022
+1. [Learning Sensorimotor Primitives of Sequential Manipulation Tasks from Visual Demonstrations](https://ieeexplore.ieee.org/document/9811703/) ICRA 2022 | [Website](https://tinyurl.com/2zrp2rzm)
 2. [Sequential robot imitation learning from observations](https://journals.sagepub.com/doi/10.1177/02783649211032721) IJRR 2021
-3. [Learning and Sequencing of Object-Centric Manipulation Skills for Industrial Tasks](https://arxiv.org/abs/2008.10471) IROS 2020
+3. [Modeling Long-horizon Tasks as Sequential Interaction Landscapes](http://arxiv.org/abs/2006.04843) CoRL 2020
+4. [Learning and Sequencing of Object-Centric Manipulation Skills for Industrial Tasks](https://arxiv.org/abs/2008.10471) IROS 2020
 
 ### Imitation and Reinforcement learning
 
 1. [Adversarial Skill Chaining for Long-Horizon Robot Manipulation via Terminal State Regularization](https://openreview.net/forum?id=K5-J-Espnaq) CoRL 2021 | [Web](https://clvrai.github.io/skill-chaining/) [Code](https://github.com/clvrai/skill-chaining)
 2. [Relay Policy Learning: Solving Long-Horizon Tasks via Imitation and Reinforcement Learning](http://arxiv.org/abs/1910.11956) CoRL 2019 | [Web](https://relay-policy-learning.github.io/) [Code](https://github.com/google-research/relay-policy-learning)
-3. [SWIRL: A sequential windowed inverse reinforcement learning algorithm for robot tasks with delayed rewards](https://doi.org/10.1177/0278364918784350) IJRR 2018 | Code
-4. [HIRL: Hierarchical Inverse Reinforcement Learning for Long-Horizon Tasks with Delayed Rewards](http://arxiv.org/abs/1604.06508) 2016 | Code
-5. [Learning Sequential Tasks Interactively from Demonstrations and Own Experience](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6696816) IROS 2013 | Code
-
-### Others
-
-1. [Modeling Long-horizon Tasks as Sequential Interaction Landscapes](http://arxiv.org/abs/2006.04843) CoRL 2020
-2. [Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors](https://proceedings.neurips.cc/paper/2020/hash/c8d3a760ebab631565f8509d84b3b3f1-Abstract.html) NeurIPS 2020
+3. [SWIRL: A sequential windowed inverse reinforcement learning algorithm for robot tasks with delayed rewards](https://doi.org/10.1177/0278364918784350) IJRR 2018
+4. [HIRL: Hierarchical Inverse Reinforcement Learning for Long-Horizon Tasks with Delayed Rewards](http://arxiv.org/abs/1604.06508) 2016
+5. [Learning Sequential Tasks Interactively from Demonstrations and Own Experience](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6696816) IROS 2013
