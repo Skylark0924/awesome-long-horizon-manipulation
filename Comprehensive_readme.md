@@ -6,11 +6,6 @@ Related works are listed as follows:
 
 > Note that some works are just pre-printed articles.
 
----
-
-**Content**
-
-[TOC]
 
 ## Methodology
 
