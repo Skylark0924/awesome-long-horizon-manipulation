@@ -8,12 +8,6 @@ Related works are listed as follows:
 
 **[Comprehensive version README (with Authors & Figures)](./Comprehensive_readme.md)**
 
----
-
-**Content**
-
-[TOC]
-
 ## Methodology
 
 ### Constraint graph
