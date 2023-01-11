@@ -8,6 +8,10 @@ Related works are listed as follows:
 
 **[Comprehensive version README (with Authors & Figures)](./Comprehensive_readme.md)**
 
+## Survey
+
+1. [Integrated Task and Motion Planning](http://arxiv.org/abs/2010.01083) 2021 | [Code](https://github.com/caelan/pybullet-planning)
+
 ## Methodology
 
 ### Constraint graph

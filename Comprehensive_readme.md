@@ -6,6 +6,19 @@ Related works are listed as follows:
 
 > Note that some works are just pre-printed articles.
 
+## Survey
+
+1. [Integrated Task and Motion Planning](http://arxiv.org/abs/2010.01083) 2021 | [Code](https://github.com/caelan/pybullet-planning)
+
+   > Caelan Reed Garrett, Rohan Chitnis, Rachel Holladay, Beomjoon Kim, Tom Silver, Leslie Pack Kaelbling and Tom ́as Lozano-Perez
+
+   <details>
+       <summary>Abstract</summary>
+   The problem of planning for a robot that operates in environments containing a large number of objects, taking actions to move itself through the world as well as to change the state of the objects, is known as task and motion planning (tamp). tamp problems contain elements of discrete task planning, discrete-continuous mathematical programming, and continuous motion planning, and thus cannot be effectively addressed by any of these fields directly. In this paper, we define a class of tamp problems and survey algorithms for solving them, characterizing the solution methods in terms of their strategies for solving the continuous-space subproblems and their techniques for integrating the discrete and continuous components of the search.
+   </details>
+   ![](img/image-20230111222532683.png)
+   
+   ![](img/image-20230111222621137.png)
 
 ## Methodology
 
