@@ -12,18 +12,28 @@ Related works are listed as follows:
 
 1. [Integrated Task and Motion Planning](http://arxiv.org/abs/2010.01083) 2021 | [Code](https://github.com/caelan/pybullet-planning)
 
+## Benchmark
+
+1. [Calvin: A Benchmark for Language-conditioned Policy Learning for Long-horizon Robot Manipulation Tasks](https://arxiv.org/pdf/2112.03227.pdf) | [Website](http://calvin.cs.uni-freiburg.de/) [Code](https://github.com/mees/calvin)
+
+## Workshop
+
+1. [Toward Efficiently Solving Long-Horizon Robotic Manipulation Tasks](https://www.youtube.com/watch?v=yLgyOyJm2Hs)
+
 ## Methodology
 
-### Constraint graph
-
-1. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021 | [Video](https://youtu.be/mCNdvjTbHNI)
-2. [Multi-robot grasp planning for sequential assembly operations](https://doi.org/10.1007/s10514-018-9748-z) Autonomous Robots 2019 | [Video](https://www.youtube.com/watch?v=vBymMF6mrhI)
-
-### Tree search
+### Constraint graph & Tree search
 
 1. [Long-Horizon Multi-Robot Rearrangement Planning for Construction Assembly](http://arxiv.org/abs/2106.02489) T-RO 2022 | [Video](https://www.youtube.com/watch?v=GqhouvL5dig)
 2. [Broadly-Exploring, Local-Policy Trees for Long-Horizon Task Planning](https://www.semanticscholar.org/reader/72c034e53213cc2f4913d73dd838b64d7b641585) CoRL 2021
-3. [Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors](https://proceedings.neurips.cc/paper/2020/hash/c8d3a760ebab631565f8509d84b3b3f1-Abstract.html) NeurIPS 2020 | [Code](https://github.com/orybkin/video-gcp)
+3. [Hierarchical Planning for Long-Horizon Manipulation with Geometric and Symbolic Scene Graphs](https://arxiv.org/pdf/2012.07277.pdf) ICRA 2021 | [Website](https://zhuyifengzju.github.io/projects/hierarchical-scene-graph/)
+4. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021 | [Video](https://youtu.be/mCNdvjTbHNI)
+5. [Self-Supervised Learning of Long-Horizon Manipulation Tasks with Finite-State Task Machines](http://proceedings.mlr.press/v144/liang21a/liang21a.pdf) L4DC 2021 | [Video](https://www.youtube.com/watch?v=mjIykUHp1q0)
+6. [SyDeBO: Symbolic-Decision-Embedded Bilevel Optimization for Long-Horizon Manipulation in Dynamic Environments](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9537786) IEEE Access 2021
+7. [Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors](https://proceedings.neurips.cc/paper/2020/hash/c8d3a760ebab631565f8509d84b3b3f1-Abstract.html) NeurIPS 2020 | [Code](https://github.com/orybkin/video-gcp)
+8. [Multi-robot grasp planning for sequential assembly operations](https://doi.org/10.1007/s10514-018-9748-z) Autonomous Robots 2019 | [Video](https://www.youtube.com/watch?v=vBymMF6mrhI)
+
+
 
 ### Reinforcement learning
 

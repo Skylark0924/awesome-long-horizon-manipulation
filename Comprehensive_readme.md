@@ -20,37 +20,19 @@ Related works are listed as follows:
    
    ![](img/image-20230111222621137.png)
 
+## Benchmark
+
+1. [Calvin: A Benchmark for Language-conditioned Policy Learning for Long-horizon Robot Manipulation Tasks](https://arxiv.org/pdf/2112.03227.pdf) | [Website](http://calvin.cs.uni-freiburg.de/) [Code](https://github.com/mees/calvin)
+
+   > Oier Mees, Lukas Hermann, Erick Rosete, Wolfram Burgard
+
+## Workshop
+
+1. [Toward Efficiently Solving Long-Horizon Robotic Manipulation Tasks](https://www.youtube.com/watch?v=yLgyOyJm2Hs)
+
 ## Methodology
 
-### Constraint graph
-
-1. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021 | [Video](https://youtu.be/mCNdvjTbHNI)
-
-   > Joaquim Ortiz-Haro, Valentin N. Hartmann, Ozgur S. Oguz, Marc Toussaint
-
-   <details>
-       <summary>Abstract</summary>
-   Efficient sampling from constraint manifolds, and thereby generating a diverse set of solutions for feasibility problems, is a fundamental challenge. We consider the case where a problem is factored, that is, the underlying nonlinear program is decomposed into differentiable equality and inequality constraints, each of which depends only on some variables. Such problems are at the core of efficient and robust sequential robot manipulation planning. Naive sequential conditional sampling of individual variables, as well as fully joint sampling of all variables at once (e.g., leveraging optimization methods), can be highly inefficient and non-robust. We propose a novel framework to learn how to break the overall problem into smaller sequential sampling problems. Specifically, we leverage Monte-Carlo Tree Search to learn assignment orders for the variable-subsets, in order to minimize the computation time to generate feasible full samples. This strategy allows us to efficiently compute a set of diverse valid robot configurations for mode-switches within sequential manipulation tasks, which are waypoints for subsequent trajectory optimization or samplingbased motion planning algorithms. We show that the learning method quickly converges to the best sampling strategy for a given problem, and outperforms user-defined orderings or fully joint optimization, while providing a higher sample diversity. Video: https://youtu.be/mCNdvjTbHNI
-   </details>
-
-   <img src="img/image-20230110141824543.png" alt="" style="zoom:30%;" />
-
-   ![](img/image-20230110141802409.png)
-
-2. [Multi-robot grasp planning for sequential assembly operations](https://doi.org/10.1007/s10514-018-9748-z) Autonomous Robots 2019 | [Video](https://www.youtube.com/watch?v=vBymMF6mrhI)
-
-   > Mehmet Dogar, Andrew Spielberg, Stuart Baker, Daniela Rus
-
-   <details>
-       <summary>Abstract</summary>
-   This paper addresses the problem of finding robot configurations to grasp assembly parts during a sequence of collaborative assembly operations. We formulate the search for such configurations as a constraint satisfaction problem (CSP). Collision constraints in an operation and transfer constraints between operations determine the sets of feasible robot configurations. We show that solving the connected constraint graph with off-the-shelf CSP algorithms can quickly become infeasible even for a few sequential assembly operations. We present an algorithm which, through the assumption of feasible regrasps, divides the CSP into independent smaller problems that can be solved exponentially faster. The algorithm then uses local search techniques to improve this solution by removing a gradually increasing number of regrasps from the plan. The algorithm enables the user to stop the planner anytime and use the current best plan if the cost of removing regrasps from the plan exceeds the cost of executing those regrasps. We present simulation experiments to compare our algorithm’s performance to a naive algorithm which directly solves the connected constraint graph. We also present a physical robot system which uses the output of our planner to grasp and bring parts together in assembly configurations.
-   </details>
-   
-   ![](img/image-20230110142004085.png)
-   
-   ![](img/image-20230110141920223.png)
-
-### Tree search
+### Constraint graph & Tree search
 
 1. [Long-Horizon Multi-Robot Rearrangement Planning for Construction Assembly](http://arxiv.org/abs/2106.02489) T-RO 2022 | [Video](https://www.youtube.com/watch?v=GqhouvL5dig)
 
@@ -60,6 +42,7 @@ Related works are listed as follows:
        <summary>Abstract</summary>
    Robotic assembly planning enables architects to explicitly account for the assembly process during the design phase, and enables efficient building methods that profit from the robots’ different capabilities. Previous work has addressed planning of robot assembly sequences and identifying the feasibility of architectural designs. This paper extends previous work by enabling planning with large, heterogeneous teams of robots. We present a planning system which enables parallelization of complex task and motion planning problems by iteratively solving smaller subproblems. Combining optimization methods to solve for manipulation constraints with a sampling-based bi-directional space-time path planner enables us to plan cooperative multirobot manipulation with unknown arrival-times. Thus, our solver allows for completing subproblems and tasks with differing timescales and synchronizes them effectively. We demonstrate the approach on multiple case-studies to show the robustness over long planning horizons and scalability to many objects and agents of our algorithm. Finally, we also demonstrate the execution of the computed plans on two robot arms to showcase the feasibility in the real world.
    </details>
+
 
    <img src="img/image-20230110142111591.png" alt="" style="zoom:50%;" />
 
@@ -74,13 +57,54 @@ Related works are listed as follows:
    Long-horizon planning in realistic environments requires the ability to reason over sequential tasks in high-dimensional state spaces with complex dynamics. Classical motion planning algorithms, such as rapidly-exploring random trees, are capable of efficiently exploring large state spaces and computing longhorizon, sequential plans. However, these algorithms are generally challenged with complex, stochastic, and high-dimensional state spaces as well as in the presence of narrow passages, which naturally emerge in tasks that interact with the environment. Machine learning offers a promising solution for its ability to learn general policies that can handle complex interactions and high-dimensional observations. However, these policies are generally limited in horizon length. Our approach, Broadly-Exploring, Local-policy Trees (BELT), merges these two approaches to leverage the strengths of both through a task-conditioned, modelbased tree search. BELT uses an RRT-inspired tree search to efficiently explore the state space. Locally, the exploration is guided by a task-conditioned, learned policy capable of performing general short-horizon tasks. This task space can be quite general and abstract; its only requirements are to be sampleable and to wellcover the space of useful tasks. This search is aided by a task-conditioned model that temporally extends dynamics propagation to allow long-horizon search and sequential reasoning over tasks. BELT is demonstrated experimentally to be able to plan long-horizon, sequential trajectories with a goal conditioned policy and generate plans that are robust.
    </details>
 
+
    ![](img/image-20230110142235348.png)
 
    ![](img/image-20230110142255558.png)
 
    ![](img/image-20230110142435583.png)
 
-3. [Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors](https://proceedings.neurips.cc/paper/2020/hash/c8d3a760ebab631565f8509d84b3b3f1-Abstract.html) NeurIPS 2020 | [Website](https://orybkin.github.io/video-gcp/) [Code](https://github.com/orybkin/video-gcp)
+3. [Hierarchical Planning for Long-Horizon Manipulation with Geometric and Symbolic Scene Graphs](https://arxiv.org/pdf/2012.07277.pdf) ICRA 2021 | [Website](https://zhuyifengzju.github.io/projects/hierarchical-scene-graph/)
+
+   > Yifeng Zhu, Jonathan Tremblay, Stan Birchfield, Yuke Zhu
+
+   ![](img/image-20230124120654838.png)
+
+   ![](img/image-20230124120757365.png)
+
+4. [Learning Efficient Constraint Graph Sampling for Robotic Sequential Manipulation](http://arxiv.org/abs/2011.04828) ICRA 2021 | [Video](https://youtu.be/mCNdvjTbHNI)
+
+   > Joaquim Ortiz-Haro, Valentin N. Hartmann, Ozgur S. Oguz, Marc Toussaint
+
+   <details>
+       <summary>Abstract</summary>
+   Efficient sampling from constraint manifolds, and thereby generating a diverse set of solutions for feasibility problems, is a fundamental challenge. We consider the case where a problem is factored, that is, the underlying nonlinear program is decomposed into differentiable equality and inequality constraints, each of which depends only on some variables. Such problems are at the core of efficient and robust sequential robot manipulation planning. Naive sequential conditional sampling of individual variables, as well as fully joint sampling of all variables at once (e.g., leveraging optimization methods), can be highly inefficient and non-robust. We propose a novel framework to learn how to break the overall problem into smaller sequential sampling problems. Specifically, we leverage Monte-Carlo Tree Search to learn assignment orders for the variable-subsets, in order to minimize the computation time to generate feasible full samples. This strategy allows us to efficiently compute a set of diverse valid robot configurations for mode-switches within sequential manipulation tasks, which are waypoints for subsequent trajectory optimization or samplingbased motion planning algorithms. We show that the learning method quickly converges to the best sampling strategy for a given problem, and outperforms user-defined orderings or fully joint optimization, while providing a higher sample diversity. Video: https://youtu.be/mCNdvjTbHNI
+   </details>
+
+
+   <img src="img/image-20230110141824543.png" alt="" style="zoom:30%;" />
+
+   ![](img/image-20230110141802409.png)
+
+5. [Self-Supervised Learning of Long-Horizon Manipulation Tasks with Finite-State Task Machines](http://proceedings.mlr.press/v144/liang21a/liang21a.pdf) L4DC 2021 | [Video](https://www.youtube.com/watch?v=mjIykUHp1q0)
+
+   > Junchi Liang, Abdeslam Boularia
+
+   <img src="img/image-20230124120935533.png" style="zoom:50%;" />
+
+   ![](img/image-20230124120911270.png)
+
+6. [SyDeBO: Symbolic-Decision-Embedded Bilevel Optimization for Long-Horizon Manipulation in Dynamic Environments](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9537786) IEEE Access 2021
+
+   > ZHIGEN ZHAO, ZIYI ZHOU, MICHAEL PARK, AND YE ZHAO
+
+   ![](img/image-20230124121040073.png)
+
+   ![](img/image-20230124121102408.png)
+
+   ![](img/image-20230124121126038.png)
+
+7. [Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors](https://proceedings.neurips.cc/paper/2020/hash/c8d3a760ebab631565f8509d84b3b3f1-Abstract.html) NeurIPS 2020 | [Website](https://orybkin.github.io/video-gcp/) [Code](https://github.com/orybkin/video-gcp)
 
    > Karl Pertsch, Oleh Rybkin, Frederik Ebert, Chelsea Finn, Dinesh Jayaraman, Sergey Levine
 
@@ -88,12 +112,26 @@ Related works are listed as follows:
        <summary>Abstract</summary>
    The ability to predict and plan into the future is fundamental for agents acting in the world. To reach a faraway goal, we predict trajectories at multiple timescales, first devising a coarse plan towards the goal and then gradually filling in details. In contrast, current learning approaches for visual prediction and planning fail on longhorizon tasks as they generate predictions (1) without considering goal information, and (2) at the finest temporal resolution, one step at a time. In this work we propose a framework for visual prediction and planning that is able to overcome both of these limitations. First, we formulate the problem of predicting towards a goal and propose the corresponding class of latent space goal-conditioned predictors (GCPs). GCPs significantly improve planning efficiency by constraining the search space to only those trajectories that reach the goal. Further, we show how GCPs can be naturally formulated as hierarchical models that, given two observations, predict an observation between them, and by recursively subdividing each part of the trajectory generate complete sequences. This divide-and-conquer strategy is effective at long-term prediction, and enables us to design an effective hierarchical planning algorithm that optimizes trajectories in a coarse-to-fine manner. We show that by using both goal-conditioning and hierarchical prediction, GCPs enable us to solve visual planning tasks with much longer horizon than previously possible.
    </details>
-   
+
+
    <img src="img/image-20230110142613016.png" alt="" style="zoom:50%;" />
-   
+
    ![](img/image-20230110142640831.png)
-   
-   
+
+8. [Multi-robot grasp planning for sequential assembly operations](https://doi.org/10.1007/s10514-018-9748-z) Autonomous Robots 2019 | [Video](https://www.youtube.com/watch?v=vBymMF6mrhI)
+
+   > Mehmet Dogar, Andrew Spielberg, Stuart Baker, Daniela Rus
+
+   <details>
+       <summary>Abstract</summary>
+   This paper addresses the problem of finding robot configurations to grasp assembly parts during a sequence of collaborative assembly operations. We formulate the search for such configurations as a constraint satisfaction problem (CSP). Collision constraints in an operation and transfer constraints between operations determine the sets of feasible robot configurations. We show that solving the connected constraint graph with off-the-shelf CSP algorithms can quickly become infeasible even for a few sequential assembly operations. We present an algorithm which, through the assumption of feasible regrasps, divides the CSP into independent smaller problems that can be solved exponentially faster. The algorithm then uses local search techniques to improve this solution by removing a gradually increasing number of regrasps from the plan. The algorithm enables the user to stop the planner anytime and use the current best plan if the cost of removing regrasps from the plan exceeds the cost of executing those regrasps. We present simulation experiments to compare our algorithm’s performance to a naive algorithm which directly solves the connected constraint graph. We also present a physical robot system which uses the output of our planner to grasp and bring parts together in assembly configurations.
+   </details>
+
+   ![](img/image-20230110142004085.png)
+
+   ![](img/image-20230110141920223.png)
+
+
 
 ### Reinforcement learning
 
